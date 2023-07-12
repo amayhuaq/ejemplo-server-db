@@ -47,6 +47,10 @@ app.get("/guardar-producto/:codigo/:nombre/:precio/:cantidad", async function(re
     res.send("Producto creado satisfactoriamente")
 })
 
+app.get("/", function(req, res) {
+    res.send("Si hay conexion al servidor");
+})
+
 app.listen(port, function() {
     console.log("El servidor se encuentra activo: " + port)
     conexionBD()
